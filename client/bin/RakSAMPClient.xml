@@ -1,0 +1,56 @@
+<!--
+Avalable runmodes:
+	0 = Bare mode (doesn't spawn),
+	1 = Normal mode (stays still at a position),
+	2 = Follows a player,
+	3 = Follows a player with a vehicle,
+	4 = Mode for playing routes,
+-->
+
+<RakSAMPClient console="0" runmode="1" autorun="0" find="1" select_classid="0"
+			   print_timestamps="0" chatcolor_rgb="0 0 130" clientmsg_rgb="0 130 0"
+			   followplayer="Noob" followplayerwithvehicleid="0" followDistance="5.0" followZOffset="0.0"
+			   imitatechat="">
+
+	<!-- The first one is the one it will connect to -->
+	<server nickname="Leet" password="">localhost:7777</server>
+	<server nickname="Leet" password="">217.18.70.60:7800</server> <!-- AU faggots -->
+	<server nickname="Leet" password="">212.187.99.172:8888</server>
+	<server nickname="Leet" password="">192.168.0.1:7777</server>
+	<server nickname="Leet" password="">84.114.165.127:7778</server>
+	<server nickname="Leet" password="">213.186.46.20:7776</server> <!-- UIF -->
+
+	<!-- If in normal mode, stay still at... -->
+	<normal_pos position="375.35 2512.09 16.56" rotation="0.0" />
+
+	<!-- If in playing routes mode, go to a position to get near by vehicle ids. -->
+	<play_pos position="375.35 2512.09 16.56" rotation="0.0" />
+
+	<!--
+	Available commands:
+		!exit or !quit: exits client.
+		!reconnect: reconnects the server.
+		!reload: reloads settings.
+		!stats: shows raknet statistics.
+		!players: shows list of players.
+		!goto: go to players position.
+		!imitate: change imitate name.
+		!vlist: shows list of vehicles.
+		!vdeath: send vehicle death notification.
+		!selveh: selects vehicle for playback.
+		!rtlist: shows list of routes.
+		!loadrt: loads a route.
+		!playrt: plays the selected route.
+		!stoprt: stops the selected route.
+		!menusel: selects an item from the GTA menu.
+	-->
+
+	<!-- These get called when we successfully connected to a server. -->
+	<autorun>!selveh 4</autorun>
+	<autorun>!loadrt 0</autorun>
+	<autorun>!playrt</autorun>
+	
+	<!-- Finds text from the chatbox and says something. -->
+	<find text="PM from" say="" bk_color="255 255 255" text_color="255 0 0" />
+
+</RakSAMPClient>

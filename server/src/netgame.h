@@ -1,0 +1,2 @@
+void resetPools();
+void UpdateNetwork();
